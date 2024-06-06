@@ -4,6 +4,7 @@ import de.westnordost.streetcomplete.data.osm.edits.upload.LastEditTimeStore
 import de.westnordost.streetcomplete.data.osm.geometry.ElementGeometry
 import de.westnordost.streetcomplete.data.osm.mapdata.ElementKey
 import de.westnordost.streetcomplete.data.osm.mapdata.MapDataUpdates
+import de.westnordost.streetcomplete.overlays.surface.SurfaceOverlay
 import de.westnordost.streetcomplete.util.Listeners
 import de.westnordost.streetcomplete.util.ktx.nowAsEpochMilliseconds
 import de.westnordost.streetcomplete.util.logs.Log
@@ -30,7 +31,7 @@ class ElementEditsController(
         isNearUserLocation: Boolean
     ) {
         Log.d(TAG, "Add ${type.name} for ${action.elementKeys.joinToString()}")
-        add(ElementEdit(0, type, geometry, source, nowAsEpochMilliseconds(), false, action, isNearUserLocation))
+        add(ElementEdit(0, SurfaceOverlay(), geometry, source, nowAsEpochMilliseconds(), false, action, isNearUserLocation))
     }
 
     override fun get(id: Long): ElementEdit? =

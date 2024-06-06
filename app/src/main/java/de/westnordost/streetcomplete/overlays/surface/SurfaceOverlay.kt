@@ -23,7 +23,7 @@ class SurfaceOverlay : Overlay {
 
     override val title = R.string.overlay_surface
     override val icon = R.drawable.ic_quest_street_surface
-    override val changesetComment = "Specify surfaces"
+    override val changesetComment = "StreetComplete Quests"
     override val wikiLink: String = "Key:surface"
     override val achievements = listOf(CAR, PEDESTRIAN, WHEELCHAIR, BICYCLIST, OUTDOORS)
     override val hidesQuestTypes = setOf(

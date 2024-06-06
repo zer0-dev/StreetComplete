@@ -73,7 +73,6 @@ class OpenChangesetsManager(
             "comment" to type.changesetComment,
             "created_by" to USER_AGENT,
             "locale" to Locale.getDefault().toLanguageTag(),
-            QUESTTYPE_TAG_KEY to type.name,
             "source" to source
         )
 
